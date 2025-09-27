@@ -3,7 +3,7 @@ import React from "react";
 function TaskStatus({ items, onComplete }) {
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-3">Task Status</h2>
+      <h2 className="text-lg font-semibold mb-3">Task Status</h2>
       {items.length === 0 ? (
         <div className="text-gray-500 bg-white border border-dashed border-gray-300 rounded-xl p-4">
           Select a ticket to add to Task Status
