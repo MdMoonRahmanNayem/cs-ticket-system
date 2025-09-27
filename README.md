@@ -1,16 +1,16 @@
-# React + Vite
+What is JSX, and why is it used?
+ans: JSX (JavaScript XML) is a syntax extension for JavaScript that looks like HTML.
+It allows developers to write UI elements in a way that’s easier to read and understand. JSX makes React code cleaner and more expressive because you can mix HTML-like syntax directly with JavaScript logic.
+What is the difference between State and Props?
+ans: State: A component’s own data, managed internally. It can change over time (mutable).
+Props: Data passed from parent to child components. They are read-only (immutable).
+What is the useState hook, and how does it work?
+ans: useState is a React hook that lets you add state to functional components.
+It returns two values: The current state, A function to update the state.
+How can you share state between components in React?
+ans: Lift state up: Move state to a common parent component and pass it down as props.
+Context API: Share state globally without prop drilling.
+State management libraries: For larger apps.
+How is event handling done in React?
+ans: Events are written in camelCase, instead of strings, you pass a function.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
