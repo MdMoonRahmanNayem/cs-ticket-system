@@ -49,7 +49,7 @@ const IconCalendar = () => (
   </svg>
 );
 
-export default function TicketCard({ ticket, onAdd }) {
+function TicketCard({ ticket, onAdd }) {
   return (
     <button
       onClick={() => onAdd(ticket)}
@@ -81,3 +81,5 @@ export default function TicketCard({ ticket, onAdd }) {
     </button>
   );
 }
+
+export default TicketCard

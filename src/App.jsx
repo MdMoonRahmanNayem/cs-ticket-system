@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import TicketCard from "./components/TicketCard";
 import TaskStatus from "./components/TaskStatus";
+import Footer from "./components/Footer";
 import ticketsData from "./data/tickets";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,12 +34,11 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen flex flex-col">
       <Navbar />
       <Banner inProgress={inProgress.length} resolved={resolved.length} />
 
-      <main className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* LEFT: Customer Tickets */}
+      <main className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6 flex-grow">
         <section className="lg:col-span-2">
           <h2 className="text-xl font-semibold mb-3">Customer Tickets</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -54,10 +54,8 @@ function App() {
           </div>
         </section>
 
-        {/* RIGHT: Task Status + Resolved Task */}
         <aside className="lg:col-span-1 space-y-6">
           <TaskStatus items={inProgress} onComplete={handleComplete} />
-
           <section>
             <h2 className="text-lg font-semibold mb-3">Resolved Task</h2>
             {resolved.length === 0 ? (
@@ -89,6 +87,7 @@ function App() {
       </main>
 
       <ToastContainer position="bottom-right" autoClose={2000} />
+      <Footer />
     </div>
   );
 }
